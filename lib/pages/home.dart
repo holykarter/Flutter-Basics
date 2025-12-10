@@ -281,7 +281,7 @@ class HomePage extends StatelessWidget {
     return Container(
           margin: const EdgeInsets.only(top: 40,left: 20,right: 20),
           decoration: BoxDecoration(
-            boxShadow: [
+            boxShadow: [ // why the boxShadow is multiple elements
               BoxShadow(
                 color: const Color(0xff1D1617).withOpacity(0.11),
                 blurRadius: 40,
