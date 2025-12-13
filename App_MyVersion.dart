@@ -76,12 +76,37 @@ class HomePage extends StatelessWidget{
   
   Container _searchField(){
     return Container(
-      child:null,
+      child:TextField(
+        decoration : InputDecoration(
+          hintText: "search a pancake",
+          hintStyle: const TextStyle(
+          color: Color(0xffDDDADA),
+          fontSize:14),
+          filled: true,
+          //labelText: "search pancake",
+          fillColor : Colors.white,
+          contentPadding: const EdgeInsets.all(15), // edgeInsets.top(15) , edgeInsets.bottom, so on i don't think that very necessary.
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10),
+            borderSide:BorderSide.none
+          ),    
+          prefixIcon: Padding(
+          padding: const EdgeInsets.all(10),
+          child: SvgPicture.network("https://raw.githubusercontent.com/mahdinazmi/Flutter-Basics/refs/heads/main/assets/icons/Search.svg"),
+          ),
+          suffixIcon: Row (
+                          children: 
+                          VerticalDivider(
+                          color:Colors.black,
+                          indent:10,
+                          endIndent:10,
+                          thickness:0.1,)
+                           ),
+                                  ),
+
+        
+      ),
     );
   }
   
 }
-
-
-
-
